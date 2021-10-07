@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VENTASModelStoreContainer" CdmEntityContainer="VENTASEntities">
+    <EntitySetMapping Name="CLIENTES">
+      <EntityTypeMapping TypeName="VENTASModel.CLIENTES">
+        <MappingFragment StoreEntitySet="CLIENTES">
+          <ScalarProperty Name="codcli" ColumnName="codcli" />
+          <ScalarProperty Name="nomcli" ColumnName="nomcli" />
+          <ScalarProperty Name="dircli" ColumnName="dircli" />
+          <ScalarProperty Name="numtel" ColumnName="numtel" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
