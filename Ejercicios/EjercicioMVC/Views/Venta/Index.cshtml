@@ -1,0 +1,51 @@
+﻿@model IEnumerable<EjercicioMVC.Models.VENTA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Agregar Nuevo", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codventa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codprod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codcli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.codventa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.codprod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.codcli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.codventa }) |
+                @Html.ActionLink("Details", "Details", new { id = item.codventa }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.codventa })
+            </td>
+        </tr>
+    }
+</table>

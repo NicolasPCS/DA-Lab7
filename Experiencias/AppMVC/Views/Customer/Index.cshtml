@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AppMVC.Models.CLIENTES>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Agregar Nuevo", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomcli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dircli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numtel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomcli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dircli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numtel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.codcli)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.codcli }) |
+                @Html.ActionLink("Details", "Details", new { id = item.codcli }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.codcli })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VENTASModel1StoreContainer" CdmEntityContainer="VENTASEntities1">
+    <EntitySetMapping Name="VENTA">
+      <EntityTypeMapping TypeName="VENTASModel1.VENTA">
+        <MappingFragment StoreEntitySet="VENTA">
+          <ScalarProperty Name="codventa" ColumnName="codventa" />
+          <ScalarProperty Name="codprod" ColumnName="codprod" />
+          <ScalarProperty Name="codcli" ColumnName="codcli" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
